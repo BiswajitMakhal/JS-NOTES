@@ -1,0 +1,42 @@
+//-------ARITHMETIC//
+
+//    +, -, /, *, %, **
+
+//+ => ADDITION AND CONCATENATION
+//- => SUBTRACTION, / => DEVIDE, % => REMAINDER
+// ** => EXPONENTIATION (2 ** 3 = 8)
+
+//--------COMPARISON//
+
+//   =
+//   == (NOT STRICT COMPARISON)
+//   === (STRICT COMPARISON)
+//   !=  (NOT STRICT COMPARISON)
+//   !== (STRICT COMPARISON)
+//   >=
+//   <=
+//   <
+//   >
+
+//  =  VALUE DEOA
+//  ==  VALUE EQUAL ACHE KINA DEKHE TYPE CHECK KORE NA
+
+// let a = 12 == "12";
+// console.log(a);
+
+// ===  TYPE CHECK KORE DEKHE JE SAME ACHE KINA
+// let b = 12 === "12";
+// console.log(b);
+
+// !=  NOT EQUAL (DOUBLE EQUAL-TE JETA HOI SETA ULTO HOE JAI JOKHON VALUE EQUAL THAKE TOKHON FALSE HOI , AR JOKHON VALUE DIFFERENT THAKE TOKHON TRUE)
+// let c = 12 != "18"; //output true//
+// console.log(c);
+
+//  !==  NOT EQUAL EQUAL (TRIPLE EQUAL-TE JETA HOI SETA ULTO HOE JAI ,ATEO NOT EQUAL-ER MOTO SAME KAJ KORE KINTU ATE TYPE CHECK HOI  )
+
+
+
+
+
+
+
