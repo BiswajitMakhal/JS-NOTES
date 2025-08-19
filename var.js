@@ -33,6 +33,8 @@
 
 // a = 25;
 
+
+
 //------ VAR JODI CURLY BRACESER VITORE THAKE AR KONO ROKOM FUNCTION-ER VITORE THAKE NA//
 //TAHOLEO SETA GLOBAL SCOPE//
 
@@ -42,6 +44,9 @@
 // }
 // console.log(x);
 
+
+
+
 // ------LET KEYWORDS CURLY BRACES-ER RESPECT KORE
 
 // let a = 10;//global scope//
@@ -50,6 +55,8 @@
 //     console.log("inside", a);
 // }
 // console.log("outside", a);
+
+
 
 
 //-------VAR DIYE VARIABLE BANALE FUNCTION SCOPE HOI, KARON VAR KEYWORDS SUDHU FUNCTION SCOPE-ER RESPECT KORE BAAKI//
