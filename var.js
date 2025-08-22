@@ -21,40 +21,40 @@
 //-------TDZ 1 THEKE 5 PROJONTO TEMPORAL DEAD ZONE
 // JS JANE JANE JE VARIABLE ACHE KINTU VALUE DITE PARENA //
 
-// console.log(c);
+console.log(c);
 
-// let c = 15;
+let c = 15;
 
-//-----HOISTING//
+// -----HOISTING (AKTA VARIABLE JOKHON JS-A BANANO HOI TOKHON SETA DUTO VAGE VAG HOI DECLARE PART UPORE CHOLE JAI AR INITIIALIZATION PART NICHE THEKE JAI)
 
-// var a = undefined;
+var a = undefined;
 
-// console.log(a);
+console.log(a);
 
-// a = 25;
+a = 25;
 
 
 
 //------ VAR JODI CURLY BRACESER VITORE THAKE AR KONO ROKOM FUNCTION-ER VITORE THAKE NA//
 //TAHOLEO SETA GLOBAL SCOPE//
 
-// var x = 1;  // global scope //
-// {
-//     var x = 3;//eitao global scope//
-// }
-// console.log(x);
+var x = 1;  // global scope //
+{
+    var x = 3;//eitao global scope//
+}
+console.log(x);
 
 
 
 
 // ------LET KEYWORDS CURLY BRACES-ER RESPECT KORE
 
-// let a = 10;//global scope//
-// {
-//     let a = 20;//block scope//
-//     console.log("inside", a);
-// }
-// console.log("outside", a);
+let a = 10;//global scope//
+{
+    let a = 20;//block scope//
+    console.log("inside", a);
+}
+console.log("outside", a);
 
 
 

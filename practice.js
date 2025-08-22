@@ -1,3 +1,5 @@
+// LESSER OR EQUAL THAN 4
+
 let a = [20, 15, 5, 2, 3, 1, 4];
 let b = [];
 
@@ -7,6 +9,9 @@ for (i = 0; i < a.length; i++) {
     }
 }
 console.log(b);
+
+
+// CHECK THE LEAP YEAR:
 
 let year = 2020;
 if (year % 4 === 0 || year % 400 === 0) {
