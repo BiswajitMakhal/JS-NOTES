@@ -66,6 +66,71 @@ function example7(a) {
 let a = example7(12);
 console.log(a);
 
+//------------- FIRST CLASS FUNCTION  (FUNCTION KE AMRA AKTA VALUE/DATA-AR MOTO USE KORTE PARI, MANE AI FUNCTION KE VARIABLE-AR MODHE RAKHA JAI , ONNO FUNCTION-ER ARGUMENT HISEBE PAHTANO JAI, ABAR FUNCTION THEKE RETURN TAO KORA JAI)
+
+function example8(val) {
+    val();
+}
+example8(function () {  //akhane argument ar vitore function chalanor por seta parameter-a (val) jache then function call korle outpur bar hoche
+    console.log("first class function");
+});
+
+
+
+//--------------- HIGHER ORDER FUNCTION (HIGHER ORDER FUNCTION HOLO AMON AKTA FUNCTION JEITA ONNO FUNCTION KE ARGUMENT HISEBE NITE PARE, OR AREKTA FUNCTION RETURN KORTE PARE OR DUTOI KORTE PARE )
+
+// EX-1: JEI FUNCTION PARAMETER-AR MODDHE ONNO FUNCTION ACCEPT KORE--->
+
+function hof() {
+    console.log("This is a higher order function");
+}
+hof(function () {
+
+});
+
+// EX-2: JEI FUNCTION RETURN KORE ARAKTA FUNCTION--->
+
+function hof2() {
+    return function () {
+        console.log("This is a also higher order function")
+    }
+}
+hof2()(); //prothom bracket ta main function call korar jonno, ar second bracket ta return function call korar jonno//
+
+
+// -------------PURE AND IMPURE FUNCTIONS
+
+// PURE FUNCTION-----> SOB SOMOI AKI INPUT DILE AKI OUTPUT DEBE, AR BAIRER KONO DATA CHANGE KORE NA.
+
+let pure = "pure function";
+
+function sure() {
+    return "I am a pure function";  //return-ar jaigai console.log korle aita impure hoejeto ,karon console korle bairer environment change hoto 
+}
+
+let sss = sure();// ai duto line ke ak line teu kora jai --->
+
+console.log(sss);// console.log(sure());
+
+
+
+
+
+//IMPURE FUNCTION-----> AKI INPUT DILEO OUTPUT CHANGE HOTE PARE, BAIRER DATA CHANGE KORE OR BAIRER ENVIRONMENT-AR UPORE NIRVOR KORE
+
+let mpure = 22;
+
+function impure() {
+    mpure++
+    console.log(mpure);
+}
+impure();
+
+
+
+
+
+
 
 
 
