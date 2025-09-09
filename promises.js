@@ -4,6 +4,23 @@
 
 //ASYNC CODE : ASYNCHRONOUS MANE HOLO KAAJ GULO AKISATHE CHOLTE PARE KINTU AKTAR JONNO AR AKTA THEME THAKE NA, JAVASCRIPT KONO KAAJ KE PORE KORAR JONNO REKHE DEI JATE BAAKI GULO AAGE CHOLTE PARE.
 
+// Example of ASYNCHRONOUS:
+
+console.log("start");//synchronous code  jeta immediate run hoi
+
+setTimeout(() => {
+    console.log("middle");//akhane setTimeout javascript-er asynchronous function , akhane code ta call stack-a jabe na first 1 second timer end hole callback queue te jabe, then event loop check kore je call stack khali ache kina,jehutu akhane khali ache tai callback queue theke call stack-a pathai tarpor run hoi.//
+}, 1000);
+
+console.log("end");//atao synchronous code
+
+// OUTPUT:
+// start
+// end
+// middle
+
+
+
 
 
 //-------------- CALLBACK : AI FUNCTION TA HOLO SEI FUNCTION JETA ARAKTA FUNCTION-ER ARGUMENT HISEBE PATHANO HOI PARAMETER-A.
@@ -54,11 +71,14 @@ one();
 
 
 
-// --------------PROMISES: (PROMISE HOLO AKTA OBJECT, JETA BOLE DEI JE AKHON AMI RESULT DITE PARBO NA, VOBISHOT-A JODI SUCCESS HOI THEN RESULT DEBE NAHOLE ERROR DEBE. )
+// --------------PROMISES: (PROMISE HOLO AKTA OBJECT, JETA BOLE DEI JE AKHON AMI RESULT DITE PARBO NA, VOBISHOT-A JODI SUCCESS HOI THEN RESULT(resolve) DEBE, NAHOLE ERROR(reject) DEBE. )
+
+
+// PROMISE WITH VARIABLE:
 
 const myPromise = new Promise((resolve, reject) => {  //(resolve, reject) => { ... } অংশকে বলে executor function।// 
     let success = false;
-    if (success) {
+    if (success) {  //if block sudhu tokhoni run hoi jokhon condition true hoi false hole skip hoi//
         resolve("✅Operation successful");
     } else {
         reject("❌Operation failed");
@@ -70,7 +90,9 @@ myPromise
         console.log(result);
     })
     .catch((error) => {     //reject hole .catch cholbe// (error)--> holo parameter ar parameter hisebe sei value pabe jeta reject-te pathano hoechilo//
-        console.error(error);
+
+        console.error(error);  //kono kichu error or warning-er jonno aita use hoi//
+
     })
     .finally(() => {   //.finally sob somoi cholbe ,resolve hok or reject hok na keno, kichu kichu kaaj thake jeta sofol or bartho hok na keno korte hobei, jemon loading screen off kora , database connection close kora , memory free kora etc.//
         console.log("Promise completed");
@@ -88,10 +110,33 @@ myPromise
 
 // EXAMPLE:
 const promise = new Promise(function executor(resolve, reject) {
+
     // এখানে কাজ লেখা হবে
+
 });
 
 
+
+
+// PROMISE WITH ASYNCHRONOUS OR FUNCTION :
+
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {    //setTimeout holo js-ar built-in function, jeta bole ai function ke akhuni use korona khanikhon por koro//
+            let dataFound = true;
+            if (dataFound) {
+                resolve({ id: 1, name: "Pizza" });
+            } else {
+                reject("Data not found");
+            }
+        }, 2000);
+    });
+}
+
+fetchData()
+    .then((data) => console.log("Received:", data))
+    .catch((err) => console.error("Error:", err));
 
 
 
