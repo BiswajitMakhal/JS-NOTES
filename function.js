@@ -21,6 +21,14 @@ let example2 = () => {
 }
 example2();
 
+// Implicit return শুধু arrow function-এর জন্য কাজ করে।
+
+let square = num => num * num; //Arrow function - এক লাইনের জন্য implicit return
+
+console.log(square(4)); // 16
+
+
+
 // ------------PARAMETER(PARAMETER HOLO SEI JAIGA JEKHANE FUTURE VALUE MANE ARGUMENT JABE)
 
 function example3(v1) { //v1 holo parameter//   (argument ta jabe parameter-a ar parameter-ar value holo v1 )
@@ -57,7 +65,7 @@ function example6(v1, v2, ...val) {
 }
 example6(1, 2, 3, 4, 5, 6, 7, 8, 9,);
 
-// -----------RETURN (RETURN KORLE FUNCTION AKTA VALUE FEROT DEI JETA AMRA VARIABLE-A RAKHTE PARI ABAR ONNO KOTHAO BABOHAR KORTE PARI)
+// -----------RETURN (RETURN KORLE FUNCTION AKTA VALUE FEROT DEI, JETA AMRA VARIABLE-A RAKHTE PARI ABAR ONNO KOTHAO BABOHAR KORTE PARI jokhon amra function call korbo)
 
 function example7(a) {
     return 26 + a;

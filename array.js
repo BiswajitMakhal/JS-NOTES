@@ -47,7 +47,12 @@ console.log(srtt);
 
 // SORT, FOR EACH , MAP, REDUCE, FILTER --> SOBAI NIJER MODDHE FUNCTION ACCEPT KORE
 
-// -----------MAP (MAP SUDHU TOKHONI USE KORTE HOI JOKHON AMADER NEW ARRAY BANATE HOI AAGER ARRAY-ER DATAR BASIS-A)
+// -----------MAP (MAP SUDHU TOKHONI USE KORTE HOI JOKHON AMADER NEW ARRAY BANATE HOI AAGER ARRAY-ER DATAR BASIS-A, always length same thake.)
+
+// 👉 map() হলো Array method।
+// এটা প্রতিটি element-এর উপর function চালায় এবং একটা নতুন array return করে।
+// মূল array change হয় না।
+
 // EX:1
 let maf = [12, 25, 13, 28, 32];
 let newmaf = maf.map(function (val) {
@@ -67,7 +72,7 @@ let newarr = arr.map(function (val) {
 console.log(newarr);
 
 
-// ------------FILTER (FILTER HOLO JAVASCRIPT-ER AKTA ARRAY METHOD ,JETA ARRAY-ER ELEMENTS KE BECHE NIYE NEW ARRAY CREATE KORE,FILTER KONO ELEMENT-KE MUCHE FELENA BORONG CONDITION TRUE HOLE SUDHU SEI ELEMENT KE NEW ARRAY TE RAKHE)
+// ------------FILTER (FILTER HOLO JAVASCRIPT-ER AKTA ARRAY METHOD ,JETA ARRAY-ER ELEMENTS KE BECHE NIYE NEW ARRAY CREATE KORE,FILTER KONO ELEMENT-KE MUCHE FELENA BORONG CONDITION TRUE HOLE SUDHU SEI ELEMENT KE NEW ARRAY TE RAKHE,length kom hote pare)
 
 let fil = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -75,6 +80,8 @@ let newfil = fil.filter(function (val) {
     if (val > 5) return true;
 });
 console.log(newfil);
+
+
 
 // ------------REDUCE (REDUCE HOLO JAVASCRIPT-ER ARRAY METHOD,JETA ARRAY-ER SOB ELEMENTS KE AKSATHE AKTA SINGLE VALUE TE KOMIYE DEI. * SUM, PRODUCT, MAX, MIN OR ONNO KONO CUMULATIVE CALCULATION KORAR JONNO REDUCE USE KORA HOI.)
 
@@ -108,6 +115,32 @@ let yy = xx.reduce(function (acc, curr) {
     return acc;
 }, {});
 console.log(yy);
+
+
+
+// -------------FIND:
+
+// find() হলো Array method।
+
+// এটা array-এর প্রতিটি element-এর উপর condition (test function) চালায়।
+
+// যেই element সবার আগে condition pass করে → সেটা return করে।
+
+// যদি একটাও match না পায় → undefined return করে।
+
+let users = [
+    { id: 1, name: "Rahul" },
+    { id: 2, name: "Mita" },
+    { id: 2, name: "Biswajit" },
+    { id: 3, name: "Sohan" }
+];
+
+let user = users.find(u => u.id === 2); //aita single line implicit return hoche ate curly braces na dileo chole sudhu arrow function-ar jonno , ar jehutu akhane akta parameter use hoche tai bracket deoa hoini parameter-a
+
+console.log(user);
+
+// output---> akhane output id:2, name: Mitra asbe jodio id:2 duto ache kintu jehutu first id tar pori condition match kore jache porer ta tai print hobe na. 
+
 
 
 

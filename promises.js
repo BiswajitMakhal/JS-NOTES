@@ -76,7 +76,7 @@ one();
 
 // PROMISE WITH VARIABLE:
 
-const myPromise = new Promise((resolve, reject) => {  //(resolve, reject) => { ... } অংশকে বলে executor function।// 
+const myPromise = new Promise((resolve, reject) => {  //(resolve, reject) => { ... } অংশকে বলে executor function।.   resolve এবং reject এগুলো executor function এর parameters// 
     let success = false;
     if (success) {  //if block sudhu tokhoni run hoi jokhon condition true hoi false hole skip hoi//
         resolve("✅Operation successful");
@@ -120,7 +120,7 @@ const promise = new Promise(function executor(resolve, reject) {
 
 // PROMISE WITH ASYNCHRONOUS OR FUNCTION :
 
-
+// EX:1
 function fetchData() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {    //setTimeout holo js-ar built-in function, jeta bole ai function ke akhuni use korona khanikhon por koro//
@@ -135,10 +135,86 @@ function fetchData() {
 }
 
 fetchData()
-    .then((data) => console.log("Received:", data))
+    .then((data) => console.log("Received:", data))  //aita single line arrow function use hoeche tai arrow-tar por curly braces use hoini
     .catch((err) => console.error("Error:", err));
 
 
 
+// EX:2
+let ExPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let name = true;
+            if (name) {
+                resolve("Name: Biswajit");
+            }
+            else {
+                reject("Data is not found");
+            }
+        }, 4000);
+    });
+}
+
+ExPromise()
+    .then((result) => {
+        console.log(result);
+        return ("Data is found")  //.then-ar moddhe return korale seta porer .then moddhe deoa parameter-a jai //
+    })
+    .then((re) => {
+        console.log(re);
+    })
+    .catch(error => {  //akhane sudhu akta parameter ache bole bracket deoa hoini, multiple parameter thakle dite hoto , akhane na dileo chole//
+        console.log(error);
+    })
+    .finally(() => {
+        console.log("Promise completed wihout async and await");
+    })
 
 
+
+//------------ ASYNC- AWAIT
+
+// ASYNC: JavaScript এ async হলো একটা কীওয়ার্ড, যেটা আমরা function এর আগে লিখি ,এটা বোঝায় যে ওই function টা asynchronous ভাবে কাজ করবে এবং সবসময় Promise return করবে। ।
+
+
+
+// AWAIT: await হলো JavaScript এর একটা কীওয়ার্ড যেটা শুধু async function এর ভেতরে ব্যবহার করা যায়।
+// এর কাজ হলো —
+
+// 👉 কোনো Promise resolve (অথবা reject) না হওয়া পর্যন্ত কোড execution কে থামিয়ে রাখা।
+
+
+
+// TRY AND CATCH : JavaScript-এ try...catch হলো error (ভুল) ধরার ব্যবস্থা। মানে, তুমি এমন কোড চালাতে পারো যেটাতে ভুল হবার সম্ভাবনা আছে। যদি ভুল হয় → প্রোগ্রাম বন্ধ হবে না, বরং সেটা catch ব্লকে ধরা পড়বে।
+
+
+let ExAsync = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let Data = true;
+            if (Data) {
+                resolve("Data: I am an async and await's example")
+            }
+            else {
+                reject("Data is not found")
+            }
+        }, 5000)
+    })
+}
+
+
+
+let Show = async () => {
+    try {
+        let ResolveValue = await ExAsync(); //akhane jodi variable na dao tahole resolve-r data ta akhane transfer hobe na, tai akahne ResolveValue bole variable naoa holo//
+        console.log(ResolveValue);
+
+        let user = "AsyncData is found"
+        console.log(user);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+Show();
