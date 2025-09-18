@@ -73,6 +73,15 @@ one();
 
 // --------------PROMISES: (PROMISE HOLO AKTA OBJECT, JETA BOLE DEI JE AKHON AMI RESULT DITE PARBO NA, VOBISHOT-A JODI SUCCESS HOI THEN RESULT(resolve) DEBE, NAHOLE ERROR(reject) DEBE. )
 
+// কিন্তু ভবিষ্যতে তিনটার মধ্যে একটা হবে:
+
+// 1. Pending → কাজ চলছে
+
+// 2. Resolved / Fulfilled → কাজ সফল হলে result দেবে
+
+// 3. Rejected → কাজ ব্যর্থ হলে error দেবে
+
+
 
 // PROMISE WITH VARIABLE:
 
