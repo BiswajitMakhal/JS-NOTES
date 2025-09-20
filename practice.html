@@ -1,0 +1,50 @@
+<button id="btn">Click Me</button>
+
+<script>
+    let button = document.getElementById("btn");
+
+    // Function আলাদা করে লিখতে হবে
+    function showMessage() {
+        alert("Button clicked!");
+    }
+
+    // Event Listener Add করলাম
+    button.addEventListener("click", showMessage);
+
+    // ৩ সেকেন্ড পরে Event Listener Remove করলাম
+    setTimeout(() => {
+        button.removeEventListener("click", showMessage);
+        alert("Event Listener removed!");
+    }, 3000);
+
+
+</script>
+
+
+
+<h1>Welcome!</h1>
+<img src="big-image.jpg" alt="Big Image">
+
+<script>
+    window.onload = function () {
+        alert("পুরো পেজ (ইমেজসহ) লোড হয়ে গেছে ✅");
+    };
+</script>
+
+
+
+<h1>type something.....</h1>
+
+<input type="text" name="text" id="text" placeholder="Start typing.....">
+
+<div>live Count: <span class="count">0</span></div>
+
+<script>
+    let Livecount = document.querySelector(".count");
+
+    let Input = document.getElementById("text");
+
+    Input.addEventListener("input", () => {
+        Livecount.textContent = Input.value.length;
+    })
+</script>

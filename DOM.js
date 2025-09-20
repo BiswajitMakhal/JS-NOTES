@@ -70,7 +70,7 @@ console.dir(queryAll);
 
 // --------------Text or Content Access : innerText, textContent, innerHTML
 
-// innerText or textContent : same kaaj text content change kore//
+// innerText or textContent : same kaaj text change kore , textContent: faster ar jegulo visible na setao change korte pare, innerText: slower, ar visible jeta setai change korte pare//
 //innerHTML : text change kore na html dei bhitore//
 
 
@@ -222,10 +222,35 @@ color.classList.toggle("reverse"); //toggle: কোনো class থাকলে 
 
 //✔️ Q5. Select all <li> elements and print their text using a loop.
 
+// Ans1:
 let list = document.querySelectorAll("li");
 list.forEach((val) => {
     console.log(val.innerText);
 })
+
+// Ans:2
+let list2 = document.querySelectorAll("li");
+for (let i = 0; i < list2.length; i++) {
+    console.log(list2[i].textContent);
+}
+
+
+
+//✔️ Q6. How do you get the src of an image using javascript?
+
+// Ans1:
+let image = document.getElementById("pic");
+console.log(image.src);
+
+// Ans2:
+let image2 = document.getElementById("pic");
+console.log(image2.getAttribute("src")); //getAttribute diye jei attribute ta likhbo tar value chole asbe//
+
+
+
+
+
+
 
 
 
