@@ -1,50 +1,37 @@
-<button id="btn">Click Me</button>
+<div id="buttonContainer"></div>
 
 <script>
-    let button = document.getElementById("btn");
+    const container = document.getElementById("buttonContainer");
 
-    // Function আলাদা করে লিখতে হবে
-    function showMessage() {
-        alert("Button clicked!");
+    for (let i = 1; i <= 100; i++) {
+        let btn = document.createElement("button");
+        btn.textContent = "Button " + i;
+        container.appendChild(btn);
     }
 
-    // Event Listener Add করলাম
-    button.addEventListener("click", showMessage);
-
-    // ৩ সেকেন্ড পরে Event Listener Remove করলাম
-    setTimeout(() => {
-        button.removeEventListener("click", showMessage);
-        alert("Event Listener removed!");
-    }, 3000);
-
-
+    container.addEventListener("click", function (value) {
+        if (value.target.tagName === "BUTTON") {
+            alert("You clicked: " + value.target.textContent);
+        }
+    });
 </script>
 
 
-
-<h1>Welcome!</h1>
-<img src="big-image.jpg" alt="Big Image">
+<!-- 2 -->
+<ul id="myList"></ul>
 
 <script>
-    window.onload = function () {
-        alert("পুরো পেজ (ইমেজসহ) লোড হয়ে গেছে ✅");
-    };
+    let ul = document.getElementById("myList");
+
+    for (let i = 1; i <= 10; i++) {
+        let li = document.createElement("li");
+        li.textContent = "Item " + i;
+        ul.appendChild(li);
+    }
+
+    let fifthItem = ul.children[4];
+    ul.removeChild(fifthItem);
 </script>
 
 
-
-<h1>type something.....</h1>
-
-<input type="text" name="text" id="text" placeholder="Start typing.....">
-
-<div>live Count: <span class="count">0</span></div>
-
-<script>
-    let Livecount = document.querySelector(".count");
-
-    let Input = document.getElementById("text");
-
-    Input.addEventListener("input", () => {
-        Livecount.textContent = Input.value.length;
-    })
-</script>
+<!--  -->

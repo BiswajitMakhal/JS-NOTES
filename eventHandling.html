@@ -5,9 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Handling</title>
+    <style>
+        /* <!-- KeyEvent or window --> */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #key {
+            font-size: 20rem;
+            text-align: center;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- addEventListener -->
     <!-- singleClick -->
     <p class="singleClick">Lorem ipsum dolor sit amet consectetur.</p>
 
@@ -22,6 +37,20 @@
     <!-- inputEvent -->
     <br><br>
     <input type="text" id="text" placeholder="typed">
+    <br><br>
+
+    <!--changeEvent  -->
+    <h2 id="Device">Select you Device</h2>
+    <select>
+        <option selected disabled>Choose your Device</option>
+        <option value="Samsung">Samsung Galaxy s24</option>
+        <option value="Xioami">Poco F7</option>
+        <option value="oppo">oppo Reno 7</option>
+        <option value="iqoo">iqoo neo 9 pro</option>
+    </select>
+    <!-- KeyEvent or window -->
+    <h1 id="key">a</h1>
+
 
 
 

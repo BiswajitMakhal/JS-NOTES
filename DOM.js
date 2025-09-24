@@ -148,7 +148,7 @@ h2.style.backgroundColor = "black"
 h2.style.fontFamily = "Cursive";
 h2.style.textTransform = "uppercase"
 
-// classList(recomended structure)
+// classList(recomended structure)--> add, remove, toggle
 
 let color = document.getElementById("title");
 color.classList.add("colorfull"); //element-a class add kore//

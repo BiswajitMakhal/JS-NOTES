@@ -67,5 +67,24 @@ console.log(b);
 
 
 
+// ----------------Extra:
+
+//  Template Literals কী?
+
+// Template Literals হলো JavaScript এ নতুনভাবে string লেখার একটি উপায় (ES6 এ এসেছে)।
+// এতে string লেখার জন্য আমরা backtick (`) ব্যবহার করি, single ' ' বা double " " কোটস নয়।
+
+let name = "Biswajit";
+
+// সাধারণ string
+let str1 = "Hello " + name + ", welcome!";
+
+// Template Literal
+let str2 = `Hello ${name}, welcome!`;
+
+console.log(str1); // Hello Biswajit, welcome!
+console.log(str2); // Hello Biswajit, welcome!
+
+
 
 

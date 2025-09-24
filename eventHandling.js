@@ -57,5 +57,42 @@ inp.addEventListener("input", (a) => { //addEventListener jokhoni chalabo tokhon
 
 
 
+// change:
+// change event হলো এমন একটা event, যেটা ঘটে যখন কোনো form element (যেমন: <input>, <select>, <textarea>, <checkbox>, <radio>) এর value পরিবর্তন করা হয় এবং user সেটাকে final করে (অর্থাৎ input field থেকে বের হয় বা নতুন option select করে)।
+
+let select = document.querySelector("select");
+let Device = document.getElementById("Device");
+
+select.addEventListener("change", (val) => {
+    Device.textContent = `${val.target.value} Device Selected` //jokhon Device select kore change korbe tokhoni h2-ar text ta change hobe//
+})
+// ai target.value log kore dekhe nite hobe//
+
+
+
+
+// keyup or keydown: (2:23:37)
+
+// keyup → চাপা key ছেড়ে দিলে event fire হয়।
+// keydown → কোনো key চাপা মাত্র event fire হয়।
+// window → window holo puro screen ta.
+
+
+let key = document.getElementById("key");
+window.addEventListener("keydown", (value) => {
+    if (value.key === " ") { //aita backspace-ar jonno condition dilam 
+        key.textContent = 'SPC';
+    }
+    else {
+        key.textContent = value.key
+    }
+})
+
+
+
+
+
+
+
 
 
