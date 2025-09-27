@@ -1,37 +1,17 @@
-<div id="buttonContainer"></div>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-    const container = document.getElementById("buttonContainer");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dome</title>
+</head>
 
-    for (let i = 1; i <= 100; i++) {
-        let btn = document.createElement("button");
-        btn.textContent = "Button " + i;
-        container.appendChild(btn);
-    }
-
-    container.addEventListener("click", function (value) {
-        if (value.target.tagName === "BUTTON") {
-            alert("You clicked: " + value.target.textContent);
-        }
-    });
-</script>
+<body>
 
 
-<!-- 2 -->
-<ul id="myList"></ul>
 
-<script>
-    let ul = document.getElementById("myList");
+    <script src="./practice.js"></script>
+</body>
 
-    for (let i = 1; i <= 10; i++) {
-        let li = document.createElement("li");
-        li.textContent = "Item " + i;
-        ul.appendChild(li);
-    }
-
-    let fifthItem = ul.children[4];
-    ul.removeChild(fifthItem);
-</script>
-
-
-<!--  -->
+</html>
