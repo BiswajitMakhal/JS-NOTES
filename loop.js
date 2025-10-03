@@ -171,3 +171,31 @@ while (prnts < 101) {
   }
   prnts++;
 }
+
+// ✔️11. Skip multiplies of 3
+//       Write a loop from 1 to 20 that:
+//       👉Skips number divisible by 3
+//       👉Print all others.
+
+//     💡use continue.
+
+for (let l = 1; l < 21; l++) {
+  if (l % 3 === 0) continue;
+  console.log(l);
+}
+
+// ✔️12. Print first 5 Odd numbers only
+//       Write a loop from 1 to 100 that:
+//      👉Prints only 5 odd numbers
+//      👉Then stops the loop
+
+// 💡Use both if, continue and a counter + break
+
+let countt = 0;
+for (let I = 1; I < 100; I++) {
+  if (I % 2 === 1) {
+    countt++;
+    console.log(I);
+  }
+  if (countt === 5) break;
+}
