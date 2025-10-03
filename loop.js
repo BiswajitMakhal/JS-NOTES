@@ -163,11 +163,11 @@ while (prnt < 101) {
 
 //jodi ami chai 7-tao print hok then sudhu console log take aage likhte hobe
 
-let prnt = 1;
-while (prnt < 101) {
-  console.log(prnt);
-  if (prnt % 7 === 0) {
+let prnts = 1;
+while (prnts < 101) {
+  console.log(prnts);
+  if (prnts % 7 === 0) {
     break;
   }
-  prnt++;
+  prnts++;
 }
