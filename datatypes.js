@@ -1,5 +1,5 @@
-// --------DATA TYPES ARE TWO TYPES 1.PRIMITIVE TYPES//
-//                                  2.REFERENCE TYPES(NON-PRIMITIVE TYPES)//
+// -----------DATA TYPES ARE TWO TYPES 1.PRIMITIVE TYPES//
+//                                     2.REFERENCE TYPES(NON-PRIMITIVE TYPES)//
 
 //PRIMITIVE TYPES: AGULO KE JODI COPY KORA HOI TAHOLE REAL COPY PEYE JAOA JAI//
 //EX:string, number(integer), boolean, null , undefined, symbol, bigint
@@ -20,9 +20,9 @@
 //       ORIGINAL LIBRARY TAR FIELDS CHANGE HOE JAI , SETA JATE NA HOI AMRA SYMBOL USE KORBO)
 
 let obj = {
-    uid: 1,
-    name: "Biswajit",
-    age: 12,
+  uid: 1,
+  name: "Biswajit",
+  age: 12,
 };
 let u1 = Symbol("uid");
 obj[u1] = "001";
@@ -33,17 +33,15 @@ obj[u1] = "001";
 let a = 9007199254740991n; //n diye amra bigint use kori//
 a = a + 4n;
 
-
-
 //NON-PRIMITVE TYPES: ADER COPY KORLE REAL COPY PAOA JAI NA KINTU TAR JAIGAI PARENT-ER REFERENCE PAOA JAI//
 // EX: array, objects, function//
 //      []       {}       ()
 
 let a = {
-    name: "Biswajit",
+  name: "Biswajit",
 };
 let b = a;
-b.name = "Makhal"//b-ar value change korle a-ar value change hoe jache//
+b.name = "Makhal"; //b-ar value change korle a-ar value change hoe jache//
 console.log(a);
 console.log(b);
 
@@ -62,10 +60,8 @@ console.log(b);
 //        ONNO KONO OPERATORS SIGN USE KORLE CONCAT HOI NA
 let a = "5" + 1; //concat holo//
 console.log(a);
-let b = "5" - 1;//akhane hobe na//
+let b = "5" - 1; //akhane hobe na//
 console.log(b);
-
-
 
 // ----------------Extra:
 
@@ -84,7 +80,3 @@ let str2 = `Hello ${name}, welcome!`;
 
 console.log(str1); // Hello Biswajit, welcome!
 console.log(str2); // Hello Biswajit, welcome!
-
-
-
-
