@@ -1,4 +1,4 @@
-//-------ARITHMETIC//
+//-------ARITHMETIC://
 
 //    +, -, /, *, %, **
 
@@ -6,9 +6,7 @@
 //- => SUBTRACTION, / => DEVIDE, % => (MODULUS) REMAINDER
 // ** => EXPONENTIATION (2 ** 3 = 8)
 
-
-
-//--------COMPARISON//
+//--------COMPARISON://
 
 //   =
 //   == (NOT STRICT COMPARISON)
@@ -36,26 +34,17 @@ console.log(c);
 
 //  !==  NOT EQUAL EQUAL (TRIPLE EQUAL-TE JETA HOI SETA ULTO HOE JAI ,ATEO NOT EQUAL-ER MOTO SAME KAJ KORE KINTU ATE TYPE CHECK HOI  )
 
-
-
-
-
-//---------ASSIGNMENT OPERATOR//
+//---------ASSIGNMENT OPERATOR://
 
 let a = 12;
 a += 2; //ai line tar mane hoche a-tar aager value te 2 addition kore abar a-tate save kora//
 console.log(a);
-a *= 3;   //ager line add kore 14 hochilo tai tar sathe 3 multiply kore abar a-er moddhe save korche//
+a *= 3; //ager line add kore 14 hochilo tai tar sathe 3 multiply kore abar a-er moddhe save korche//
 console.log(a);
 
-
-
-
-//---------LOGICAL//
+//---------LOGICAL://
 
 //    &&, ||, !
-
-
 
 //  && => (AND OPERATOR) AR MANE HOCHE DUTO JODI CONDITION THAKE AR TAR MODHE JODI DUTOI TRUE HOI THEN OUTPUT TRUE HOBE
 
@@ -72,15 +61,9 @@ console.log(a);
 
 //EX:  TRUE => FALSE (12>!50 =>TRUE)
 
-
-
-
-//--------UNARY OPERATOR//
+//--------UNARY OPERATOR://
 
 //      +, -, !, typeof, ++, --
-
-
-
 
 // + => jodi string ta number-a convert kora jai then tar aage + lagiye dile number hoe jabe(Ex: +"5")
 
@@ -98,35 +81,7 @@ let b = 12;
 b = b++ + 5; //post-increment//
 console.log(b); //first time same value print//
 
-
-
-
-//---------TERNARY OPERATOR//
+//---------TERNARY OPERATOR://
 // ?, :
 
 // 12 > 13 ? console.log(true) : console.log(false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
