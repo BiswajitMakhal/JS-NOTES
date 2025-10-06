@@ -31,7 +31,8 @@ let person = {
 person.greet(); // Hi, I am Biswajit
 
 // Ex:2
-//akhane jodi Method-ar bhitore arakta ES5 function use kori ar tar moddhe this use kori taholeu se nijer value loose korbe tai bhitorer function take ES6 rakhte hobe//
+//akhane jodi object-ar Method-ar bhitore arakta ES5 function use kori, ar tar moddhe this use kori taholeu se nijer value loose korbe, tai bhitorer function take ES6 rakhte hobe
+//Es6 arrow function always tar parent-ar theke this-ar value nei
 let person1 = {
   name: "Biswajit",
   age: 26,
@@ -58,3 +59,69 @@ class Abcd {
   }
 }
 let val = new Abcd(); //val hoche Abcd class-ar akta instance
+
+// this-ar value ki sort-a jodi boli:
+// 1. global scope -> window
+// 2. function -> window
+// 3. method with es5 function -> object
+// 4. method with es6 arrow function -> window
+// 5. es5 function inside es5 method -> window
+// 6. arrow function inside es5 method -> object
+// 7. event handler-> element
+// 8. class -> blank object
+
+// -------------CALL , APPLY AND BIND
+
+//✅ CALL: (function ke call korar somoi amra set korte parbo je this-ar value ki hobe)
+
+let obj = {
+  name: "Biswjait",
+  age: 26,
+};
+
+function abc() {
+  console.log(this);
+}
+abc.call(obj); //akhane function.call() korar por call-ar moddhe jei value ta debo seta this hoe jabe, akhon this ar value obj-bole object hobe //
+
+//Ex:
+let objec = {
+  name: "Biswajit",
+  age: 26,
+};
+
+function cba(a, b, c) {
+  console.log(this, a, b, c); //akhane this ta holo object(objec), ar a,b,c holo parameter, argument-ar moddhe jei value ta debo seta oi parameter-a dhuke print hobe//
+}
+cba.call(objec, 15, 12, 13);
+
+//✅APPLY: (apply arguments array আকারে নেয়, first-ar ta this-ar value and then array-ar moddhe function tar multiple argument, mane holo --> this value, [arguments array])
+
+let ob = {
+  user: "TheBeast",
+  game: "BattleRoyal",
+};
+
+function zzz(a, b, c) {
+  console.log(this, a, b, c);
+}
+zzz.apply(ob, [12, 20, 40]); //hiseb moton akhane duto argument gache akta this value ar akta arguments array//
+
+// ✅BIND:
+// bind() হলো function method
+// এটি একটি নতুন function return করে
+// নতুন function-এর জন্য this permanently set করা যায়
+// .call() বা .apply() থেকে আলাদা কারণ bind() নতুন function তৈরি করে, this ফিক্সড রাখে
+
+let persons = {
+  user1: "Biswajit",
+  user2: "Sourav",
+};
+
+function xxx(a, b, c) {
+  console.log(this, a, b, c);
+}
+
+let fnc = xxx.bind(persons, 40, 50, 60); //akhane this permanently fix hoe gache, bind use korle function-ar copy create kore
+fnc(); //akhane function take call kora holo
+// bind() দিয়ে তৈরি করা copy মূল function থেকে আলাদা, তাই মূল function পরিবর্তন করলে copy-তে কোনো প্রভাব পড়ে না, এবং copy পরিবর্তন করলে মূল function-এ কোনো প্রভাব পড়ে না।

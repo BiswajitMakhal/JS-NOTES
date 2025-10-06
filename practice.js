@@ -1,11 +1,11 @@
-let person1 = {
-  name: "Biswajit",
-  age: 26,
-  greet: function () {
-    let arrow = () => {
-      console.log(this);
-    };
-    arrow();
-  },
+let persons = {
+  user1: "Biswajit",
+  user2: "Sourav",
 };
-person1.greet();
+
+function xxx(a, b, c) {
+  console.log(this, a, b, c);
+}
+
+let fnc = xxx.bind(persons, 40, 50, 60);
+// fnc();
