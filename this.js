@@ -58,7 +58,7 @@ class Abcd {
     this.age = 26; //jekhane jekhane this likhbo sekhane akta empty object set hoe hobe , akhane jemon empty object-ar vitore age-ar value 26 set hoeche {age:26}//
   }
 }
-let val = new Abcd(); //val hoche Abcd class-ar akta instance
+let val = new Abcd(); //val hoche Abcd class-ar akta instance, akhane new--> akta empty object create korche ar ai empty object tai holo this-ar value, aar sei empty object-er property hobe (age:26)//
 
 // this-ar value ki sort-a jodi boli:
 // 1. global scope -> window
