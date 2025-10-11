@@ -123,3 +123,107 @@ let p2 = new CreatePencil("Apsara", "apsara", 12, "blue");
 p1.write("Natraj pencil, Rs:20 with red color");
 p2.write("Apsara pencil, Rs:12 with blue color");
 // p1.erase()---> korle p1 erase hoe jabe, simmilarly on p2//
+
+//-------------------EXTENDS AND SUPER:
+
+//EXTENDS:👉 extends মানে হলো "inherit করা"।
+// মানে —
+// একটা class (child class) অন্য একটা class (parent class)-এর property এবং method গুলোকে নিজের মধ্যে নিয়ে নেয়।
+
+//SUPER:👉 super মানে হলো parent class-এর constructor বা method কে ডাকা।
+// যখন কোনো child class তার নিজের constructor তৈরি করে, তখন তাকে parent class-এর constructor-ও চালাতে হয় —
+// আর সেটা করার জন্য super() ব্যবহার করা হয়।
+
+//User class
+class User {
+  constructor(name, address, username, email) {
+    this.name = name;
+    this.address = address;
+    this.username = username;
+    this.email = email;
+    this.role = "user";
+  }
+  //jokhoni ai method take call kora hobe o bole debe ki role, user naki admin(Ex: a1.checkRole()--->you are admin//
+  checkRole() {
+    console.log(`you are ${this.role}`);
+  }
+  write(text) {
+    let h1 = document.createElement("h1");
+    h1.textContent = `${this.name} : ${text}`;
+    document.body.append(h1);
+  }
+}
+//Admin class
+//akhane extends user mane holo Admin class oi sob rakhbe jeta User class-a ache
+class Admin extends User {
+  //parent-ar constructor ke call korar jonno super use kora holo
+  constructor(name, address, username, email) {
+    super(name, address, username, email);
+    //arpore jei jinish gulo sudhu Admin-a rakhte chai seta likhbo
+    this.role = "admin";
+  }
+
+  remove() {
+    document.querySelectorAll("h1").forEach(function (elem) {
+      elem.remove();
+    });
+  }
+}
+
+let u1 = new User(
+  "Biswajit",
+  "Behala",
+  "oop123",
+  "biswjait_makhal@outlook.com"
+);
+let u2 = new User("Sourav", "Kolkata", "sourav_naskar@gmail.com");
+u1.write("hey");
+u2.write("hey");
+
+//Create New Admin
+let a1 = new Admin("admin", "India", "admin123", "admin@gmail.com"); //new Admin create kora holo
+
+// ----------------------PROTOYPAL INHERITANCE VS CLASSICAL INHERITANCE
+
+//CLASSICAL INHERITANCE : classes baniye oder extend kore deoa
+
+//PROTOTYPAL INHERITANCE:
+//jekono programing language-a inheritance-er mane holo class diye class inherit kora,kintu javascript-te prothome class chiloina,
+//to akhane ki hoto je object object diye inherit korto//
+
+//Prototypal inheritance Example:
+// মানে, তুমি যদি একবার কোনো object বা class-এ property/method তৈরি করো,
+// তাহলে অন্য object সেইগুলোকেও ব্যবহার করতে পারবে —
+// যেন “বাবার থেকে ছেলেতে গুণ উত্তরাধিকার” পাচ্ছে
+//Ex-1:
+// Parent object
+const parent = {
+  greet: function () {
+    console.log("Hello from parent!");
+  },
+};
+
+// Child object that inherits from parent
+const child = Object.create(parent); //এখানে Object.create(parent) মানে হচ্ছে — child object তৈরি হয়েছে যেটা parent-এর সব property/method পাবে prototype chain মারফত।
+
+child.greet(); // Output: Hello from parent! //ami chaile upore greet ta akhaneu call korte parbo//
+
+//Ex-2:
+//Parent object
+let coffee = {
+  color: "dark",
+  drink: function () {
+    console.log("ta ta ta ta ta ");
+  },
+};
+//Child Object
+let nessCaffe = Object.create(coffee); //( )---> ar moddhe object-ar name ta dite hobe//
+nessCaffe.tase = "Sweet";
+nessCaffe.drink();
+
+//akhane akta question aste pare je amra chaile akhane nicher tao to korte partam,
+let a = {};
+let b = { ...a };
+//kintu ate akta problem ache aita a-er puro hard copy create hoche b-er moddhe, aar amra jodi kono shared memory chai tahole , nicher motoni korte hobe,
+let c = {};
+let d = Object.create(c);
