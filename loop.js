@@ -35,8 +35,10 @@ while (i < 51) {
 // do...while loop হলো এমন একটা লুপ যেটা অন্তত একবার চলবেই, কারণ এখানে condition পরে check হয়।
 
 // do-while pattern:
+//               start
 //               do {
 //               // যে কোড চলবে
+//                  chnage
 //               } while (condition);
 
 // কিভাবে কাজ করে:
