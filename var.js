@@ -30,6 +30,9 @@ console.log(a); // undefined
 
 a = 10; // Initialization happens later
 
+// let বা const ও hoist হয়, কিন্তু “Temporal Dead Zone (TDZ)”-এ থাকে।
+// মানে declare করার আগে access করলে error হবে।
+
 //------ VAR JODI CURLY BRACESER VITORE THAKE AR KONO ROKOM FUNCTION-ER VITORE THAKE NA//
 //TAHOLEO SETA GLOBAL SCOPE//
 
