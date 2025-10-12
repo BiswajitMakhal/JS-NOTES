@@ -23,11 +23,12 @@ let c = 15;
 
 // -----HOISTING (AKTA VARIABLE JOKHON JS-A BANANO HOI TOKHON SETA DUTO VAGE VAAG HOI DECLARE PART UPORE CHOLE JAI AR INITIIALIZATION PART NICHE THEKE JAI)
 
-var a = undefined;
+// JS internally does this:
+var a; // Declaration is hoisted
 
-console.log(a);
+console.log(a); // undefined
 
-a = 25;
+a = 10; // Initialization happens later
 
 //------ VAR JODI CURLY BRACESER VITORE THAKE AR KONO ROKOM FUNCTION-ER VITORE THAKE NA//
 //TAHOLEO SETA GLOBAL SCOPE//
