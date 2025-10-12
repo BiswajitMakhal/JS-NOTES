@@ -19,7 +19,7 @@
 //   >
 
 //  =  VALUE DEOA
-//  ==  VALUE EQUAL ACHE KINA DEKHE TYPE CHECK KORE NA
+//  ==  VALUE EQUAL ACHE KINA DEKHE, TYPE CHECK KORE NA
 
 let a = 12 == "12";
 console.log(a);
@@ -84,4 +84,12 @@ console.log(b); //first time same value print//
 //---------TERNARY OPERATOR://
 // ?, :
 
-// 12 > 13 ? console.log(true) : console.log(false);
+// Ternary Operator হলো if...else স্টেটমেন্টের shortcut version।
+// এটা দিয়ে তুমি এক লাইনে condition check করতে পারো।
+
+//Syntax:
+//  12 > 13 ? console.log(true) : console.log(false);
+
+let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
