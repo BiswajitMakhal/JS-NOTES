@@ -47,7 +47,7 @@ console.log(b);
 
 //-------TRUTHY VS FALSY VALUES//
 
-//0 ,false ,"" ,null , undefined, Nan, document.all ---->falsy values
+//0 ,false ,"" ,null , undefined, Nan, document.all ---->falsy values (  !!---->ai sign ta diye browser console-a check kora jabe truthy or falsy ,Ex: !!0 )
 
 //rest all ---->truthy values
 
