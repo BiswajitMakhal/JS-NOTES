@@ -88,6 +88,8 @@ console.log(b); //first time same value print//
 // এটা দিয়ে তুমি এক লাইনে condition check করতে পারো।
 
 //Syntax:
+//condition ? expression If True : expression If False
+
 //  12 > 13 ? console.log(true) : console.log(false);
 
 let age = 20;
