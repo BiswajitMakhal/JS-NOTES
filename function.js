@@ -211,3 +211,59 @@ let sayHi = function () {
   console.log("Hi");
 };
 //☝️✔️ Variable declaration hoist হয়, ❌ function value নয়
+
+//------------------------QUESTIONS:
+
+//✔️1.Predict the output.
+function sayhi(name = "Guest") {
+  console.log("Hi", name);
+}
+sayhi();
+//Ans: Hi Guest
+
+// ✔️2.Use rest parameter to accept any number of scores and return the total.
+function getScore(...scores) {
+  let total = 0;
+  scores.forEach(function (val) {
+    total = total + val;
+  });
+  return total;
+}
+console.log(getScore(10, 12, 14, 18));
+
+//✔️3.Fix the function using early return.
+// function checkAge(age) {
+//   if (age < 18) {
+//     console.log("Too young");
+//   } else {
+//     console.log("Allowed");
+//   }
+// }
+function checkAge(age) {
+  if (age < 18) return "Too young";
+  return "Allowed";
+}
+console.log(checkAge(12));
+
+//✔️4.Pass a function into another function and execute it inside.
+function abcd(val) {
+  val();
+}
+abcd(function () {
+  console.log("hey");
+});
+
+//✔️5.Write a BMI calculator.
+function bmi(weight, height) {
+  return weight / (height * height);
+}
+console.log(bmi(69, 1.7).toFixed(2)); //weight=69kg, height=1.7meter
+
+// ✔️6.Create a reusable discount calculator (HOF).
+function discountCalculator(discount) {
+  return function (price) {
+    return price - price * (discount / 100);
+  };
+}
+let discounter = discountCalculator(10); //10% OFF
+console.log(discounter(200)); //jei amount tar discount bar korte chaichi//
