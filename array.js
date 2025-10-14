@@ -9,7 +9,7 @@ console.log(fruits[2]); // "Mango"
 
 //------------ARRAY CONCEPT:
 
-// --------------Push:(JavaScript এ push() হলো Array method, যেটা ব্যবহার করে array এর শেষে নতুন element যোগ করা হয়।)
+// --------------Push:(JavaScript এ push() হলো Array method, যেটা ব্যবহার করে array এর শেষে নতুন element যোগ করা হয়। return করে নতুন length (array-এর মোট element সংখ্যা)।)
 let frts = ["apple", "banana"];
 frts.push("mango");
 console.log(frts);
