@@ -95,3 +95,24 @@ console.log(b); //first time same value print//
 let age = 20;
 let result = age >= 18 ? "Adult" : "Minor";
 console.log(result);
+
+//----------------- NULLISH COALESCING OPERATOR:
+// ?? অপারেটরটি ব্যবহার করা হয় যখন কোনো ভ্যারিয়েবল null বা undefined হয়, তখন একটি বিকল্প মান (fallback value) দেওয়ার জন্য।
+
+// এর মানে হলো,
+// যদি value null বা undefined না হয়, তাহলে সেটাই ব্যবহার করো।
+// আর যদি null বা undefined হয়, তাহলে fallback মানটা নাও।
+
+// ?? শুধু null আর undefined এর ক্ষেত্রেই fallback নেয়।
+//  কিন্তু 0, false, "" এগুলো valid value — তাই fallback নেয় না।
+let a = null;
+let b = undefined;
+let c = 0;
+let d = "Hello";
+
+// একাধিক fallback ব্যবহার করা হচ্ছে
+let result = a ?? b ?? c ?? d ?? "Default Value";
+
+console.log(result);
+//যখন interpreter c তে পৌঁছায়, দেখে এটা null/undefined না,
+// তখন সেটাই ফাইনাল result হয়ে যায়।
