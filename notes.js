@@ -348,3 +348,37 @@ console.log(yy);
 // 7. Write a program to pretty-print a JSON string with indentation.
 // 8. Write a program to fetch JSON data from a variable and print values using JSON.parse().
 //  ---------------------------------
+
+// =====================================================================================
+// Change text on button click
+// 1) When you click a button, change the text inside a <p>
+
+// Toggle background color
+// 2) A button should toggle the background color between white and black.
+
+// Show/Hide password
+// 3) Input password field with a button to show/hide text.
+
+//Count characters in input
+// 4) Show live character count while typing.
+
+// Form validation
+// 5) Prevent form submission if fields are empty.
+// =========================================================================================
+
+// 1. Write a program to sort the characters of a string alphabetically.
+// 2. Write a program that removes all duplicate characters from a string.
+// 3. Create a program that checks whether two strings are anagrams of each other.
+// 4. Write a program to mask the last 4 digits of a phone number (e.g., 9876543210 → ******3210)
+// -------------------------
+// 1. Write a program that finds the largest and smallest elements in an array.
+// 2. Write a program that removes all duplicate elements from an array.
+// 3. Create a program to reverse an array without using reverse() method.
+// 4. Write a program to find the sum and average of all numbers in an array.
+// ------------------------------
+//1. Write a function that takes an unknown number of arguments using the rest parameter and returns their
+// sum.
+// 2. Write a function that finds the maximum number from an array using the spread operator.
+// 3. Write a program that merges two arrays using the spread operator.
+// 4. Write a program that copies an object using the spread operator (deep vs shallow copy case).
+// 5. Write a function with rest parameters that calculates the average of any number of inputs.
