@@ -1,8 +1,17 @@
+//------------------LOOP:
+// একই কাজ বারবার লিখার দরকার নেই, লুপ ব্যবহার করে সহজেই করা যায়।
+// লুপ শর্ত অনুযায়ী চলতে পারে
+// অ্যারে, অবজেক্ট বা স্ট্রিং-এর প্রতিটি element সহজে process করা যায়।
+
 //----------- FOR:
 
-//  for loop pattern:
-// for (start; end; change) {}
+//   loop pattern:
+// (start, end, change)
 
+// SYNTAX:
+// for (initialization; condition; increment/decrement) {
+//   // code to be executed each time
+// }
 // Ex:
 
 for (let i = 1; i < 101; i++) {
@@ -10,36 +19,36 @@ for (let i = 1; i < 101; i++) {
   console.log(i);
 }
 
-// start i-ar value 1, 1 101-ar theke small akbar print holo//
-// then i++ ache mean 1plus hoe 2 hobe, i-ar value holo 2 ,abar 2 101-theke small tai abar print hobe, ai kore 100 projonto print hobe,//
+// start i-ar value 1, 1 <101-ar theke small akbar print holo//
+// then i++ ache mean 1plus hoe 2 hobe, i-ar value holo 2 ,abar 2 <101-theke small tai abar print hobe, ai kore 100 projonto print hobe,//
 
 //-----------WHILE:
 
-//while loop pattern:
-//                      start
-//                      while (end) {
-//                          //code//
-//                          change
-//                      }
+// SYNTAX:
+//Initialization--------------------> before loop
+// while (condition) {
+//    code
+//increment/decrement
+// }
 
 //Ex:
-let i = 1;
+let i = 1; //Initialization
 while (i < 51) {
   // 1-50 projonto loop hobe//
-  console.log(i);
-  i++;
+  console.log(i); //code
+  i++; //increment/decrement
 }
 
 // -------------DO-WHILE:
 
 // do...while loop হলো এমন একটা লুপ যেটা অন্তত একবার চলবেই, কারণ এখানে condition পরে check হয়।
 
-// do-while pattern:
-//               start
+// SYNTAX:
+//               initialization
 //               do {
-//               // যে কোড চলবে
-//                  chnage
-//               } while (condition);
+//               // code to execute
+//                 increment/decrement
+//               } while (condition);--------------------> Condition checked after loop
 
 // কিভাবে কাজ করে:
 // প্রথমে do { } এর ভিতরের কোড একবার execute হবে।

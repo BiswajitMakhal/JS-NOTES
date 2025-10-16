@@ -10,6 +10,8 @@ console.log(fruits[2]); // "Mango"
 //------------ARRAY CONCEPT:
 
 // --------------Push:(JavaScript এ push() হলো Array method, যেটা ব্যবহার করে array এর শেষে নতুন element যোগ করা হয়। return করে নতুন length (array-এর মোট element সংখ্যা)।)
+//SYNTAX:
+// array.push(element1, element2, ...);
 let frts = ["apple", "banana"];
 frts.push("mango");
 console.log(frts);
@@ -41,6 +43,8 @@ console.log(fruits3);
 // ---------------Slice:
 // JavaScript এ slice() হলো Array method, যেটা একটা array থেকে নির্দিষ্ট অংশ কেটে নিয়ে নতুন array তৈরি করে।
 // 👉 আসল array পরিবর্তন হয় না।
+// SYNTAX:
+// array.slice(startIndex, endIndex);
 
 let fruits4 = ["apple", "banana", "mango", "orange", "grape"];
 let result = fruits4.slice(1, 4);
@@ -51,6 +55,8 @@ console.log(fruits4); // ["apple", "banana", "mango", "orange", "grape"]
 // --------------Splice:
 // JavaScript এ splice() হলো Array method, যেটা array থেকে element কেটে ফেলে বা নতুন element যোগ করে।
 // 👉 মনে রাখবে: এটা original array পরিবর্তন করে (mutate করে)।
+//SYNTAX:
+// array.splice(startIndex, deleteCount, item1, item2, ...);
 
 // ✅ Example 1: element মুছে ফেলা
 let fruits5 = ["apple", "banana", "mango", "orange"];

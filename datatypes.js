@@ -1,9 +1,16 @@
 // -----------DATA TYPES ARE TWO TYPES 1.PRIMITIVE TYPES//
 //                                     2.REFERENCE TYPES(NON-PRIMITIVE TYPES)//
 
-//PRIMITIVE TYPES: AGULO KE JODI COPY KORA HOI TAHOLE REAL COPY PEYE JAOA JAI//
+// 1. Primitive Types:
+// 👉 এরা হলো simple data values, যেগুলো directly memory-তে stored হয় (by value)।
+// 👉 অর্থাৎ, primitive মান কপি করলে তার আসল মানের নকল তৈরি হয় — reference নয়।
 //EX:string, number(integer), boolean, null , undefined, symbol, bigint
 // String: "Biswa",  'Biswa', `Biswa`
+
+// 2. Non-Primitive Types (Reference Types):
+// 👉 এরা object-based।
+// 👉 এদের মধ্যে ডেটা reference (address) আকারে stored হয়।
+// অর্থাৎ কপি করলে একই জায়গার রেফারেন্স শেয়ার হয়।
 
 //INTEGER:12, 13.5, 14
 
