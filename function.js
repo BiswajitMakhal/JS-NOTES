@@ -27,6 +27,13 @@ let square = (num) => num * num; //Arrow function - এক লাইনের �
 
 console.log(square(4)); // 16
 
+// ANONYMOUS FUNCTION:
+// কোনো নাম নেই function-এর।
+// সাধারণত callback function বা event listener হিসেবে ব্যবহার হয়।
+setTimeout(function () {
+  console.log("Hello after 2 seconds"); //2-SECOND por function ta chalanor jonno setTimeout use hoi , aar ata just anonymous function-er akta example//
+}, 2000);
+
 // ------------PARAMETER:(PARAMETER HOLO SEI JAIGA JEKHANE FUTURE VALUE MANE ARGUMENT JABE)
 
 function example3(v1) {

@@ -1,6 +1,6 @@
 //-----------STRING CONCEPT
 
-// --------SPLIT
+// --------SPLIT:
 
 let a = "I am a good boy";
 a = a.split(""); //aita letter wise split, double quotation-ar moddhe jodi gap dei, than oita word wise split hobe(gap tao print hobe)//
@@ -23,43 +23,59 @@ e = e.split("", 4); //position wise split hoche , jotota position number debo to
 console.log(e);
 
 let f = "I am a good boy";
-f = f.split(" ", 4);//position wise split hoche, akhane gap deoa hoche tai aita word wise poistion hoche
+f = f.split(" ", 4); //position wise split hoche, akhane gap deoa hoche tai aita word wise poistion hoche
 console.log(f);
 
-
-
-//--------LENGTH
+//--------LENGTH:
 
 let a = "   Biswajit Makhal ";
-console.log(a.length);//koto gulo elements ache seta bojhar jonno length use kori,space tao count hoi//
+console.log(a.length); //koto gulo elements ache seta bojhar jonno length use kori,space tao count hoi//
 
 let b = "   Biswajit Makhal ";
 b = b.trim().length; //unusual space ke hatiye dei kintu middle-ar gap ta thakbei//
 console.log(b);
 
-
-
-//--------REPLACE
+//--------REPLACE:
 
 let c = "Biswajit Makhal";
-c = c.replace("Makhal", "Dutta");//first tai ki replace korte hobe , tarporer tai konta diye replace korbo//
+c = c.replace("Makhal", "Dutta"); //first tai ki replace korte hobe , tarporer tai konta diye replace korbo//
 console.log(c);
 
 let d = "Biswajit Makhal";
-d = d.replace(" ", "");//middle-ar space ta hatanor jonno, space ta replace korlam nothing diye//
+d = d.replace(" ", ""); //middle-ar space ta hatanor jonno, space ta replace korlam nothing diye//
 console.log(d);
 
+// ------------------INCLUDES():
+// includes() হলো একটি built-in method যা চেক করে যে একটি array বা string-এর মধ্যে নির্দিষ্ট value আছে কি না।
+// এটি boolean রিটার্ন করে: true বা false।
 
+// 1️⃣. Array-এর ক্ষেত্রে:
+//SYNTAX:
+// array.includes(element, startIndex)
 
+// 1. element → যা খুঁজতে চাই
+// 2. startIndex (Optional) → কোন index থেকে খুঁজতে শুরু করবে (ডিফল্ট = 0)
 
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits.includes("banana")); // true
+console.log(fruits.includes("mango")); // false
+console.log(fruits.includes("orange", 2)); // true
+console.log(fruits.includes("orange", 3)); // false
 
+// 👉Array → element খুঁজে।
 
+// 2️⃣. String-এর ক্ষেত্রে:
+//SYNTAX:
+// string.includes(searchString, position)
 
+// 1. searchString → যা খুঁজতে চাই
+// 2. position (Optional) → কোন index থেকে search শুরু করবে (ডিফল্ট = 0)
 
+let text = "I am learning JavaScript";
 
+console.log(text.includes("JavaScript")); // true
+console.log(text.includes("Python")); // false
+console.log(text.includes("learning", 10)); // true
+console.log(text.includes("I", 2)); // false
 
-
-
-
-
-
+// 👉String → substring খুঁজে।
