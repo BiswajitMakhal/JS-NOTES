@@ -75,3 +75,20 @@ window.addEventListener("keydown", (value) => {
     key.textContent = value.key;
   }
 });
+
+// submit:
+// submit event listener ব্যবহার করা হয় যখন একটা form সাবমিট করা হয় (মানে, ইউজার যখন "Submit" বোতামে ক্লিক করে বা Enter চাপ দেয়)।
+// এটা দিয়ে তুমি ফর্ম সাবমিট হওয়ার আগেই কিছু কাজ করতে পারো — যেমনঃ
+// ➡️ইনপুট ভ্যালিডেশন করা
+// ➡️ডিফল্ট রিলোড বন্ধ করা
+// ➡️ডেটা কনসোলে দেখা বা পেজে দেখানো
+
+// SYNTAX:
+// form.addEventListener("submit", function(event) {
+//   event.preventDefault(); //-------> ডিফল্টভাবে পেজ রিলোড বন্ধ করবে
+//   // এখানে তোমার কোড লিখো
+// });
+
+// ***************************************************************************************************
+// Under the DOM-TASK folder (eventSubmit.html) file-er moddhe submit Event related Example(code) ache
+// ***************************************************************************************************

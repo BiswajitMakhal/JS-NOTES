@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        /* submit event */
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        #container-form {
+            max-width: 400px;
+            padding: 5px;
+        }
+
+        #container-form>form>:last-child {
+            max-width: 80px;
+            margin: 0 auto;
+        }
+
+        .card {
+            max-width: 300px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        .profile {
+            max-width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile>img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- addEventListener---<SUBMIT-->
+
+    <!--TOPIC: Form-ar moddhe akta input field banate hobe jar moddhe data dile submit button press korar por seta card hisebe show korbe -->
+
+    <!-- submit Event  -->
+    <div id="container-form" style="display: flex; flex-direction:column;">
+        <form action="">
+            <input type="text" placeholder="Name">
+            <input type="email" name="" id="" placeholder="Email">
+            <input type="text" name="" id="" placeholder="Details">
+            <input type="text" name="" id="" placeholder="Profile pic">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+
+
+
+    <!-- Custom JS -->
+    <script>
+        let form = document.querySelector("form");
+        let input = document.querySelectorAll("input"); //querySelectorAll("input"), array-like, কিন্তু আসল Array না
+        let formContainer = document.querySelector("#container-form");
+        form.addEventListener("submit", (dets) => {
+            dets.preventDefault();
+            let card = document.createElement("div");
+            card.classList.add("card");
+            let profile = document.createElement("div");
+            profile.classList.add("profile");
+            let img = document.createElement("img");
+            img.setAttribute("src", input[3].value);//input-er 3index tate jeta likhbo sei value tai src-er value te chole jabe
+            let h4 = document.createElement("h4");
+            h4.textContent = input[0].value;
+            let h5 = document.createElement("h5");
+            h5.textContent = input[1].value; //h5-er textContent = input-er 1 index-tai je value debo seta//
+            let p = document.createElement("p");
+            p.textContent = input[2].value;
+            profile.append(img);
+            card.append(profile);
+            card.append(h4);
+            card.append(h5);
+            card.append(p);
+            formContainer.append(card);
+            input.forEach((input) => {
+                if (input.type !== "submit") {
+                    input.value = "" //input type-er value jodi submit na thake then blank kore dao, ai ta na korle input type="submit"-er value tao blank hoe jabe//
+                }
+            })
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
