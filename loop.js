@@ -18,9 +18,31 @@ for (let i = 1; i < 101; i++) {
   // 1-100 projonto print hobe//
   console.log(i);
 }
-
 // start i-ar value 1, 1 <101-ar theke small akbar print holo//
 // then i++ ache mean 1plus hoe 2 hobe, i-ar value holo 2 ,abar 2 <101-theke small tai abar print hobe, ai kore 100 projonto print hobe,//
+
+// 1️⃣ Loop-এর ভিতরে variable:
+for (let i = 0; i < 3; i++) {
+  let a = 10; // loop এর ভিতরে declare
+  console.log(a);
+}
+// কী হয়:
+// loop প্রতিবার চালানোর সময় let a = 10; execute হয়
+// মানে প্রতিবার নতুন variable তৈরি হয়
+// আগের iteration-এর a শেষ হয়ে যায় (destroy হয়)
+// তাই loop-এর ভিতরে variable reset হয়ে যায়
+
+// 2️⃣ Loop-এর বাইরে variable:
+let x = 10; // loop এর বাইরে declare
+
+for (let i = 0; i < 3; i++) {
+  console.log(x);
+}
+// কী হয়:
+// variable একবার declare হয় loop-এর আগে
+// loop যতবারই চলুক, একই variable use হয়
+// মান পরিবর্তন করলে পরের iteration-এও পরিবর্তিত মান থাকবে
+// এখানে variable reset হয় না, value same থাকে
 
 //-----------WHILE:
 
