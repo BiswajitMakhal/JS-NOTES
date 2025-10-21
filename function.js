@@ -93,10 +93,13 @@ example8(function () {
 
 // EX-1: JEI FUNCTION PARAMETER-AR MODDHE ONNO FUNCTION ACCEPT KORE--->
 
-function hof() {
+function hof(fn) {
   console.log("This is a higher order function");
+  fn(); // পাঠানো function টাকে execute করলাম
 }
-hof(function () {});
+hof(function () {
+  console.log("This is a callback function");
+});
 
 // EX-2: JEI FUNCTION RETURN KORE ARAKTA FUNCTION--->
 
