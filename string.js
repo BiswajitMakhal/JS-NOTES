@@ -1,6 +1,6 @@
 //-----------STRING CONCEPT
 
-// --------SPLIT:
+// --------SPLIT:(split() হচ্ছে JavaScript-এর একটা string method ,যেটা একটা string কে ভেঙে array বানিয়ে ফেলে।)
 
 let a = "I am a good boy";
 a = a.split(""); //aita letter wise split, double quotation-ar moddhe jodi gap dei, than oita word wise split hobe(gap tao print hobe)//
@@ -25,6 +25,11 @@ console.log(e);
 let f = "I am a good boy";
 f = f.split(" ", 4); //position wise split hoche, akhane gap deoa hoche tai aita word wise poistion hoche
 console.log(f);
+
+// -----------------JOIN: (join() হচ্ছে Array method,👉 এটা array-এর সব elements একসাথে জুড়ে (join করে) একটা string বানায়।)
+let arr = ["h", "e", "l", "l", "o"];
+let result = arr.join(""); //split-er por aita use kora jai, karon split letter or word wise array banai
+console.log(result);
 
 //--------LENGTH:
 
