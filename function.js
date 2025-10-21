@@ -70,6 +70,7 @@ function example6(v1, v2, ...val) {
 example6(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
 // -----------RETURN: (RETURN KORLE FUNCTION AKTA VALUE FEROT DEI, JETA AMRA VARIABLE-A RAKHTE PARI ABAR ONNO KOTHAO BABOHAR KORTE PARI jokhon amra function call korbo)
+//return লেখা মাত্র function ঐ জায়গায় থেমে যায়, পরে লেখা code আর execute হয় না
 
 function example7(a) {
   return 26 + a;
