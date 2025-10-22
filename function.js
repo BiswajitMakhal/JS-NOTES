@@ -85,7 +85,7 @@ function example8(val) {
   val();
 }
 example8(function () {
-  //akhane argument ar vitore function chalanor por seta parameter-a (val) jache then function call korle outpur bar hoche
+  //akhane argument ar vitore function chalanor por seta parameter-a (val) jache then function call korle output bar hoche
   console.log("first class function");
 });
 
