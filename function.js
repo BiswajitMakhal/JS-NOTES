@@ -80,6 +80,9 @@ let a = example7(12);
 console.log(a);
 
 //------------- FIRST CLASS FUNCTION:  (FUNCTION KE AMRA AKTA VALUE/DATA-AR MOTO USE KORTE PARI, MANE AI FUNCTION KE VARIABLE-AR MODHE RAKHA JAI , ONNO FUNCTION-ER ARGUMENT HISEBE PAHTANO JAI, ABAR FUNCTION THEKE RETURN TAO KORA JAI)
+// 👉Variable-er moddhe rakha jai
+// 👉Onno function-er parameter hishebe pathano jai
+// 👉Function theke return kora jai
 
 function example8(val) {
   val();
