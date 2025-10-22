@@ -83,6 +83,7 @@ console.log(a);
 // 👉Variable-er moddhe rakha jai
 // 👉Onno function-er parameter hishebe pathano jai
 // 👉Function theke return kora jai
+//****  Ete function ke ekta object er moto use kora jai.
 
 function example8(val) {
   val();
@@ -281,3 +282,25 @@ function discountCalculator(discount) {
 }
 let discounter = discountCalculator(10); //10% OFF
 console.log(discounter(200)); //jei amount tar discount bar korte chaichi//
+
+// ✔️7. Demonstrate first-class functions by storing multiple functions in an array and calling them one by one.
+// Step 1: Create multiple functions
+function greet() {
+  console.log("Hello!");
+}
+
+function bye() {
+  console.log("Goodbye!");
+}
+
+function thanks() {
+  console.log("Thank you!");
+}
+
+// Step 2: Store them in an array
+let functions = [greet, bye, thanks];
+
+// Step 3: Loop through and call each function
+for (let fn of functions) {
+  fn(); // calling the function
+}
