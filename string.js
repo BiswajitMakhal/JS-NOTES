@@ -1,5 +1,9 @@
 //-----------STRING CONCEPT
 
+// --------CASE CONVERSION:
+"hello".toUpperCase(); // "HELLO"
+"HELLO".toLowerCase(); // "hello"
+
 // --------SPLIT:(split() হচ্ছে JavaScript-এর একটা string method ,যেটা একটা string কে ভেঙে array বানিয়ে ফেলে।)
 
 let a = "I am a good boy";
@@ -51,6 +55,7 @@ d = d.replace(" ", ""); //middle-ar space ta hatanor jonno, space ta replace kor
 console.log(d);
 
 // ------------------INCLUDES():
+
 // includes() হলো একটি built-in method যা চেক করে যে একটি array বা string-এর মধ্যে নির্দিষ্ট value আছে কি না।
 // এটি boolean রিটার্ন করে: true বা false।
 
@@ -84,3 +89,12 @@ console.log(text.includes("learning", 10)); // true
 console.log(text.includes("I", 2)); // false
 
 // 👉String → substring খুঁজে।
+
+// ----------------SUBSTRING():
+// JavaScript এ substring() হলো একটা built-in string method, যেটা কোনো string থেকে নির্দিষ্ট অংশ (substring) কেটে আনে।
+
+// SYNTAX:
+// string.substring(startIndex, endIndex)
+let str = "JavaScript";
+let subString = str.substring(0, 4);
+console.log(subString);
