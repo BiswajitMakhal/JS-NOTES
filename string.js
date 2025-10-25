@@ -98,3 +98,12 @@ console.log(text.includes("I", 2)); // false
 let str = "JavaScript";
 let subString = str.substring(0, 4);
 console.log(subString);
+
+// -----------------------------------------------------------
+// SOME JAVASCRIPT METHODS THAT WORK ON BOTH ARRAY AND STRINGS:
+// -----------------------------------------------------------
+// .length              Returns number of elements or characters
+// .indexOf()           Finds the first index of a value
+// .lastIndexOf()       Finds the last index of a value
+// .includes()          Checks if a value exists
+// .slice()             Extracts a portion
