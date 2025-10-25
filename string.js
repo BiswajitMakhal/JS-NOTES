@@ -35,7 +35,7 @@ let arr = ["h", "e", "l", "l", "o"];
 let result = arr.join(""); //split-er por aita use kora jai, karon split letter or word wise array banai
 console.log(result);
 
-//--------LENGTH:
+//--------LENGTH: (এটা string বা array-এর total number of elements বা characters count করে।)
 
 let a = "   Biswajit Makhal ";
 console.log(a.length); //koto gulo elements ache seta bojhar jonno length use kori,space tao count hoi//

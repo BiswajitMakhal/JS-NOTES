@@ -41,7 +41,7 @@ console.log(fruits3);
 // ["apple", "banana", "mango"]
 
 // ---------------Slice:
-// JavaScript এ slice() হলো Array method, যেটা একটা array থেকে নির্দিষ্ট অংশ কেটে নিয়ে নতুন array তৈরি করে।
+// JavaScript এ slice() হলো Array/String method, যেটা একটা array থেকে নির্দিষ্ট অংশ কেটে নিয়ে নতুন array তৈরি করে।
 // 👉 আসল array পরিবর্তন হয় না।
 // SYNTAX:
 // array.slice(startIndex, endIndex);
