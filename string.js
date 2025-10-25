@@ -107,3 +107,6 @@ console.log(subString);
 // .lastIndexOf()       Finds the last index of a value
 // .includes()          Checks if a value exists
 // .slice()             Extracts a portion
+
+//.indexOf(), lastIndexOf(): SYNTAX -->  array.indexOf(searchElement, fromIndex)
+//                                       string.indexOf(searchValue, fromIndex)
