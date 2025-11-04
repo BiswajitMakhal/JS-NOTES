@@ -154,6 +154,16 @@ console.log(newfil);
 
 // ------------REDUCE (REDUCE HOLO JAVASCRIPT-ER ARRAY METHOD,JETA ARRAY-ER SOB ELEMENTS KE AKSATHE AKTA SINGLE VALUE TE KOMIYE DEI. * SUM, PRODUCT, MAX, MIN OR ONNO KONO CUMULATIVE CALCULATION KORAR JONNO REDUCE USE KORA HOI.)
 
+// 🔹 1️⃣ accumulator (সংক্ষেপে acc)
+// এটা হলো আগের ধাপের ফলাফল —
+// যেটা reduce() এক ধাপ থেকে আরেক ধাপে carry করে নিয়ে যায়।
+// তুমি reduce()-এর শেষে যা return করো, সেটা accumulator-এ জমে থাকে।
+// অবশেষে এই accumulator-ই শেষ output হয়।
+
+// 🔹 2️⃣ currentValue (সংক্ষেপে curr)
+// এটা হলো array-এর বর্তমান element,
+// যেটার উপর ওই মুহূর্তে কাজ হচ্ছে।
+
 let red = [1, 2, 3, 4, 5, 6];
 let newred = red.reduce(function (accumulator, current) {
   return accumulator + current; //accumulator holo reduce method-er first variable jeta array-er prottek element process korar somoy previous result joma rakhe. or current value hoche akhon je elements ta process hoche.//
@@ -163,9 +173,9 @@ console.log(newred);
 // QUESTION----> let array =[1, 2, 2, 2, 3, 4, 5, 6, 7, 8]
 // 1: 1,  2: 3,  3: 1,  4: 1,  5: 1,  6: 1,  7: 1,  8: 1 (OUTPUT WITH REDUCE).
 
+// type:1
 let x = [1, 2, 2, 2, 3, 4, 5, 6, 7, 8];
 
-// type:1
 let hello = (acc, curr) => {
   acc[curr] = (acc[curr] || 0) + 1; //ai line tai acc[curr] mane hoche accumulator-ar moddhe currenvalue key-er count store korar akta jaiga, (acc[curr]||0) mane hoche accumulator-ar moddhe jodi currvalue thake tahole seta bosbe nahole 0 bosbe, tarpore +1 hobe, bracket-ar pore +1 lekha jate oitar kaaj aage na hoi jeta bracket-a lekha seta aage hoi.//
   return acc;
