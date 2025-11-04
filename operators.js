@@ -116,3 +116,32 @@ let result = a ?? b ?? c ?? d ?? "Default Value";
 console.log(result);
 //যখন interpreter c তে পৌঁছায়, দেখে এটা null/undefined না,
 // তখন সেটাই ফাইনাল result হয়ে যায়।
+
+// ===========================================================================================================================
+
+// --------------SPREAD OPERATOR OR REST OPERATOR:
+
+//1️⃣ Spread Operator (...)
+// Spread operator ব্যবহার করা হয় array বা object-এর elements গুলোকে আলাদা করে ছড়িয়ে দেওয়ার জন্য।
+// এটার প্রতীক হলো ... (তিনটা ডট)।
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5];
+
+let result = [...arr1, ...arr2];
+console.log(result); //[1, 2, 3, 4, 5]
+
+// 🔹 এখানে ...arr1 মানে arr1-এর সব value আলাদা করে নিয়ে আসা হয়েছে।
+// 🔹 এটা সাধারণত array merge, copy বা function call-এর সময় ব্যবহার হয়।
+// ----------------------------------------------------------------------------------------------------------------------------
+// 2️⃣Rest Operator (...)
+// Rest operator দেখতে একই (তিনটা ডট ...), কিন্তু কাজ উল্টো —
+// এটা multiple values গুলোকে একত্র করে একটা array বা object হিসেবে ধরে রাখে।
+
+function addNumbers(...numbers) {
+  console.log(numbers);
+}
+addNumbers(1, 2, 3, 4, 5); //[1, 2, 3, 4, 5]
+
+// 🔹 এখানে ...numbers সব argument গুলোকে একত্র করে একটা array বানিয়েছে।
+// 🔹 এটা function parameter হিসেবে বেশি ব্যবহার হয়।
