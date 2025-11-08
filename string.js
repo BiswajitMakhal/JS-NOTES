@@ -99,6 +99,18 @@ let str = "JavaScript";
 let subString = str.substring(0, 4);
 console.log(subString);
 
+// ----------------REPEAT():
+// repeat() হলো একটা String method
+// যেটা একটা string কে নির্দিষ্ট সংখ্যক বার পুনরাবৃত্তি (repeat) করে।
+
+// SYNTAX:
+// string.repeat(count);
+
+// string = যে string বারবার করতে চাও
+// count = কয়বার repeat করবে (positive integer হতে হবে)
+
+console.log("*".repeat(5)); //*****
+
 // -----------------------------------------------------------
 // SOME JAVASCRIPT METHODS THAT WORK ON BOTH ARRAY AND STRINGS:
 // -----------------------------------------------------------
