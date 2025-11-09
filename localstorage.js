@@ -61,17 +61,18 @@ console.log(savedUser.name); // Biswajit//
 
 // localStorage-ar motoni onekta sessionStorage
 
-localStorage.setItem("UserName", "Biswajit");
-
-console.log(localStorage.getItem("UserName"));
-
-localStorage.removeItem("UserName");
-
-localStorage.setItem("UserName", "Makhal");
-
-console.log(localStorage.length);
-
-localStorage.clear();
+// Data Save করা
+sessionStorage.setItem("UserName", "Biswajit");
+// Data পড়া
+console.log(sessionStorage.getItem("UserName")); // Output: Biswajit
+// Data আপডেট করা
+sessionStorage.setItem("UserName", "Makhal");
+// Data মুছে ফেলা
+sessionStorage.removeItem("UserName");
+// সব data clear করা
+sessionStorage.clear();
+// মোট item সংখ্যা দেখা
+console.log(sessionStorage.length);
 
 //------------------------   Cookies কী?
 
