@@ -120,3 +120,46 @@ console.log(document.cookie);
 // 👉 এটা বলে দিচ্ছে — cookie কোন path এ কাজ করবে।
 //     / মানে পুরো ওয়েবসাইটে cookie ব্যবহার করা যাবে।
 //     ধরো /shop দিলে → cookie শুধু example.com/shop এর ভেতরে কাজ করবে।
+
+// ----------------Question:
+
+//✔️ 1. Write a program to filter specific properties while stringifying (using replacer function in JSON.stringify).
+
+// 🧠 replacer function কী?
+// JSON.stringify() ফাংশনের ২য় parameter হিসেবে আমরা replacer দিতে পারি।
+// এই replacer function-এর কাজ হলো —
+// 👉 কোন property গুলো থাকবে বা বাদ যাবে সেটা filter করা,
+// 👉 অথবা property-র value পরিবর্তন করা, JSON string তৈরি হওয়ার আগে।
+
+// SYNTAX:
+// JSON.stringify(value, replacerFunction)
+
+// Original object
+const user = {
+  name: "Biswajit",
+  age: 25,
+  city: "Kolkata",
+  password: "12345",
+  email: "biswajit@example.com",
+};
+
+//  JSON.stringify with a replacer function
+const jsonString = JSON.stringify(user, (key, value) => {
+  // Exclude 'password' field
+  if (key === "password") {
+    return undefined; // skip this property
+  }
+  return value; // keep everything else
+});
+
+console.log("Filtered JSON String:", jsonString);
+
+// 🧠 Explanation:
+// function replacer(key, value) {
+
+//    key = property-এর নাম
+//    value = property-এর মান
+//    return value → মান রেখে দেবে
+//    return undefined → মান বাদ যাবে
+
+// }
