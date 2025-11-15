@@ -125,6 +125,7 @@ console.log(document.cookie);
 
 //✔️ 1. Write a program to filter specific properties while stringifying (using replacer function in JSON.stringify).
 
+// JSON.stringify তিনটি আর্গুমেন্ট নেয়: (value, replacer, space)
 // 🧠 replacer function কী?
 // JSON.stringify() ফাংশনের ২য় parameter হিসেবে আমরা replacer দিতে পারি।
 // এই replacer function-এর কাজ হলো —
