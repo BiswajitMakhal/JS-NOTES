@@ -225,3 +225,155 @@ let Show = async () => {
 };
 
 Show();
+
+// =====================================================================================================================
+
+// 🟦 1) Call Stack
+
+// 🔹 এখানে JavaScript কোড এক্সিকিউট হয়—one by one
+// 🔹 Stack (LIFO) সিস্টেম
+// 🔹 কোনো function call হলে Stack-এ ঢোকে, run শেষ হলে বেরিয়ে যায়।
+
+// Imagery:
+// যেন একটা প্লেটের স্ট্যাক → যেখানে উপরের প্লেট আগে ওঠে-নামে।
+// ---------------------------------------------------------------------------------------------------------------------
+// 🟩 2) Web APIs (Browser APIs)
+
+// 🔹 ব্রাউজার প্রদত্ত আলাদা জায়গা
+// 🔹 JS নিজে long task করতে পারে না—তাই কিছু কাজ ব্রাউজারকে দেয়
+
+// যেমন:
+// setTimeout
+// setInterval
+// fetch
+// DOM events
+// HTTP request
+
+// Imagery:
+// JS ব্রাউজারকে বলে:
+// “ভাই, এটা আমাকে করে দাও। হয়ে গেলে আমাকে জানিও।”
+// ----------------------------------------------------------------------------------------------------------------------
+// 🟧 3) Callback Queue (Macrotask Queue)
+
+// 🔹 Web API যখন তার কাজ শেষ করে, callback function এখানে আসে
+// যেমন:
+// setTimeout → callback queue
+// setInterval
+// DOM events
+// Ajax old callbacks
+
+// Imagery:
+// একটা লাইনে দাঁড়িয়ে আছে সব "বড় task" ready callbacks।
+// ----------------------------------------------------------------------------------------------------------------------
+// 🟪 4) Microtask Queue
+
+// 🔹 Promises resolve হলে এখানে আসে
+// 🔹 async-await এর continuation এখানে রাখা হয়
+// 🔹 Priority highest → Event Loop আগে এখান থেকে কাজ নেয়
+
+// যেমন:
+// resolve()
+// then()
+// catch()
+// async-await resume
+
+// Imagery:
+// VIP queue → এখানে আসা জিনিস সবার আগে execute হয়।
+// ------------------------------------------------------------------------------------------------------------------------
+// 🟫 5) Event Loop
+
+// 🔹 সবার বাপ 😎
+// 🔹 Call Stack খালি আছে কিনা, queue-তে কিছু আছে কিনা — এগুলো check করে
+// 🔹 Priority:
+
+// Microtask Queue → প্রথমে
+// Callback Queue → পরে
+
+// Imagery:
+// একজন traffic police →
+// Call Stack খালি দেখলে queue থেকে কাজ push করে দেয়।
+
+// ==========================================================================================================================
+let ExAsync = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let Data = true;
+      if (Data) {
+        resolve("Data: I am an async and await's example");
+      } else {
+        reject("Data is not found");
+      }
+    }, 5000);
+  });
+};
+
+let Show = async () => {
+  try {
+    let ResolveValue = await ExAsync(); //akhane jodi variable na dao tahole resolve-r data ta akhane transfer hobe na, tai akahne ResolveValue bole variable naoa holo//
+    console.log(ResolveValue);
+
+    let user = "AsyncData is found";
+    console.log(user);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+Show();
+
+// ✅ STEP 1: Call Stack
+// Call Stack first runs:
+// ExAsync() definition
+// Show() definition
+// Show() call → Show() enters Call Stack
+// await ExAsync() → Promise pending → Show() pauses
+// 📌 এখন Call Stack খালি হয়ে যায়।
+
+// --------------
+
+// ✅ STEP 2: Web API
+// setTimeout(() => {...}, 5000)
+// → Web API → Timer runs 5 seconds
+// এই ৫ সেকেন্ড JavaScript engine কিছুই ব্লক হয় না।
+
+// ---------------
+
+// ✅ STEP 3: After 5 seconds
+// Web API timer finishes।
+// এখন এই callback:
+// () => {
+//    resolve(...)
+// }
+// ➡️ Callback Queue-তে ঢোকে
+// কারণ setTimeout → callback queue (macrotask queue)
+
+// -----------------
+
+// ✅ STEP 4: Event Loop
+// Event Loop checks:
+// Call Stack empty? ✔️
+// Microtask Queue empty? ✔️ (now)
+// Callback Queue has setTimeout callback? ✔️
+// So setTimeout-এর callback → Call Stack-এ চলে আসে।
+
+// ------------------
+
+// ✅ STEP 5: resolve() executes
+// Inside Call Stack:
+// resolve("Data: I am an async and await's example");
+// ➡️ এই resolve() এর ফলে
+// ➡️ Promise continuation → Microtask Queue-তে চলে যায়
+// অর্থাৎ নিচের লাইনগুলো Microtask Queue-তে যায়:
+
+// console.log(ResolveValue)
+// console.log(user)
+// (কারণ await → promise resolve → microtask)
+
+// --------------------
+
+// ✅ STEP 6: Microtask Queue executes (Highest Priority)
+// Event Loop আবার দেখে:
+// ✔️ Microtask Queue আছে → আগে এই লাইনগুলো রান হবে:
+
+// console.log(ResolveValue);
+// console.log("AsyncData is found");
