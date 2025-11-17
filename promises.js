@@ -377,3 +377,9 @@ Show();
 
 // console.log(ResolveValue);
 // console.log("AsyncData is found");
+
+// FINAL OUTPUT:
+// (1) 5 sec wait (কোনো output নেই)
+// (2) promise resolved
+// (3) Data: I am an async and await's example
+// (4) AsyncData is found
