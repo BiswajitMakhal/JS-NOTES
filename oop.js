@@ -101,6 +101,7 @@ class CreatePencil {
     this.price = price;
     this.color = color;
   }
+  //constructor-ar baire jaa method likhte chai likhbo
   erase() {
     //erase--> aita object-er method
     document.body.querySelectorAll("h1").forEach((val) => {
