@@ -158,6 +158,7 @@ class User {
 //akhane extends user mane holo Admin class oi sob rakhbe jeta User class-a ache
 class Admin extends User {
   //parent-ar constructor ke call korar jonno super use kora holo
+  //constructor-ar moddhe sudhu Admin-ar parameter gulo likhbo
   constructor(name, address, username, email) {
     super(name, address, username, email);
     //arpore jei jinish gulo sudhu Admin-a rakhte chai seta likhbo
@@ -184,7 +185,7 @@ u2.write("hey");
 //Create New Admin
 let a1 = new Admin("admin", "India", "admin123", "admin@gmail.com"); //new Admin create kora holo
 
-// ----------------------PROTOYPAL INHERITANCE VS CLASSICAL INHERITANCE
+// ----------------------PROTOTYPAL INHERITANCE VS CLASSICAL INHERITANCE
 
 //CLASSICAL INHERITANCE : classes baniye oder extend kore deoa
 
