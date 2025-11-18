@@ -161,8 +161,7 @@ class Admin extends User {
   //constructor-ar moddhe sudhu Admin-ar parameter gulo likhbo
   constructor(name, address, username, email) {
     super(name, address, username, email);
-    //arpore jei jinish gulo sudhu Admin-a rakhte chai seta likhbo
-    this.role = "admin";
+    this.role = "admin"; //arpore jei jinish gulo sudhu Admin-a rakhte chai seta likhbo
   }
 
   remove() {
