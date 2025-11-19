@@ -184,7 +184,7 @@ u2.write("hey");
 //Create New Admin
 let a1 = new Admin("admin", "India", "admin123", "admin@gmail.com"); //new Admin create kora holo
 
-// ----------------------PROTOYPAL INHERITANCE VS CLASSICAL INHERITANCE
+// ----------------------PROTOTYPAL INHERITANCE VS CLASSICAL INHERITANCE
 
 //CLASSICAL INHERITANCE : classes baniye oder extend kore deoa
 
