@@ -87,6 +87,13 @@ let a = [1, 2, 3, 4, 5, 6];
 let b = a.reverse(); //reverse hoe jabe//
 console.log(b);
 
+// --------------FLAT:
+// flat() → nested array কে ভেঙে এক লেভেলে নিয়ে আসে।
+let nested = [1, 2, [3, 4]];
+let singleArray = nested.flat();
+console.log(singleArray);
+// Output: [1, 2, 3, 4]
+
 // -----------SORT(SORT HOCHE ASCENDING OR DECENDING ORDER-A SAJATE PARE, SORT FUNCTION ACCEPT KORE, ABAR ALPHABETICAL ORDER-TE SAJATEO SAHAJJO KORE)
 // Ex:1
 
