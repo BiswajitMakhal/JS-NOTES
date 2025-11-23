@@ -94,6 +94,15 @@ let singleArray = nested.flat();
 console.log(singleArray);
 // Output: [1, 2, 3, 4]
 
+//CONCAT:
+// Purpose: Combine multiple arrays or values into a new array,also Join multiple strings.
+let one = [1, 2];
+let two = [3, 4];
+
+let merge = one.concat(two);
+console.log(merge); // [1, 2, 3, 4]
+console.log(one); // [1, 2] (original unchanged)
+
 // -----------SORT(SORT HOCHE ASCENDING OR DECENDING ORDER-A SAJATE PARE, SORT FUNCTION ACCEPT KORE, ABAR ALPHABETICAL ORDER-TE SAJATEO SAHAJJO KORE)
 // Ex:1
 
