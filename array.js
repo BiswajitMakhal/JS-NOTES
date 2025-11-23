@@ -94,7 +94,7 @@ let singleArray = nested.flat();
 console.log(singleArray);
 // Output: [1, 2, 3, 4]
 
-//CONCAT:
+//------------CONCAT:
 // Purpose: Combine multiple arrays or values into a new array,also Join multiple strings.
 let one = [1, 2];
 let two = [3, 4];
